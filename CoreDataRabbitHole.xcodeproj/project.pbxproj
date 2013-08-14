@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93288D7717BB1F6E0099A499 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 93288D7617BB1F6E0099A499 /* LICENSE */; };
 		93EC783417B9C9B4004CF4D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC783317B9C9B4004CF4D9 /* UIKit.framework */; };
 		93EC783617B9C9B4004CF4D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC783517B9C9B4004CF4D9 /* Foundation.framework */; };
 		93EC783817B9C9B4004CF4D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC783717B9C9B4004CF4D9 /* CoreGraphics.framework */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		93288D7417BB17E10099A499 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		93288D7617BB1F6E0099A499 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		93EC783017B9C9B4004CF4D9 /* CoreDataRabbitHole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataRabbitHole.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EC783317B9C9B4004CF4D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		93EC783517B9C9B4004CF4D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,6 +75,7 @@
 		93EC787317B9C9B4004CF4D9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		93EC787517B9C9B4004CF4D9 /* CoreDataRabbitHoleTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataRabbitHoleTests.h; sourceTree = "<group>"; };
 		93EC787617B9C9B4004CF4D9 /* CoreDataRabbitHoleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataRabbitHoleTests.m; sourceTree = "<group>"; };
+		93EC788017B9D1A3004CF4D9 /* CoreDataRabbitHole 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreDataRabbitHole 2.xcdatamodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 		93EC782717B9C9B4004CF4D9 = {
 			isa = PBXGroup;
 			children = (
+				93288D7617BB1F6E0099A499 /* LICENSE */,
+				93288D7417BB17E10099A499 /* README */,
 				93EC783B17B9C9B4004CF4D9 /* CoreDataRabbitHole */,
 				93EC786F17B9C9B4004CF4D9 /* CoreDataRabbitHoleTests */,
 				93EC783217B9C9B4004CF4D9 /* Frameworks */,
@@ -263,6 +269,7 @@
 				93EC785B17B9C9B4004CF4D9 /* ARDMasterViewController_iPad.xib in Resources */,
 				93EC785E17B9C9B4004CF4D9 /* ARDDetailViewController_iPhone.xib in Resources */,
 				93EC786117B9C9B4004CF4D9 /* ARDDetailViewController_iPad.xib in Resources */,
+				93288D7717BB1F6E0099A499 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,6 +515,7 @@
 				93EC787C17B9C9B4004CF4D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93EC787D17B9C9B4004CF4D9 /* Build configuration list for PBXNativeTarget "CoreDataRabbitHoleTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +524,7 @@
 				93EC787F17B9C9B4004CF4D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
@@ -523,9 +532,10 @@
 		93EC784D17B9C9B4004CF4D9 /* CoreDataRabbitHole.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				93EC788017B9D1A3004CF4D9 /* CoreDataRabbitHole 2.xcdatamodel */,
 				93EC784E17B9C9B4004CF4D9 /* CoreDataRabbitHole.xcdatamodel */,
 			);
-			currentVersion = 93EC784E17B9C9B4004CF4D9 /* CoreDataRabbitHole.xcdatamodel */;
+			currentVersion = 93EC788017B9D1A3004CF4D9 /* CoreDataRabbitHole 2.xcdatamodel */;
 			path = CoreDataRabbitHole.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -19,6 +19,8 @@
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
 
++ (NSManagedObjectContext *)newManagedObjectContext;
+
 @property (strong, nonatomic) UINavigationController *navigationController;
 
 @property (strong, nonatomic) UISplitViewController *splitViewController;

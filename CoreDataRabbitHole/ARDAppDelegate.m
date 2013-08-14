@@ -43,6 +43,14 @@
         self.window.rootViewController = self.splitViewController;
         masterViewController.managedObjectContext = self.managedObjectContext;
     }
+
+    // Listen for changes to context/child contexts
+    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
+    [nc addObserver:self
+           selector:@selector(mergeChanges:)
+               name:NSManagedObjectContextDidSaveNotification
+             object:self.managedObjectContext];
+
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -89,6 +97,17 @@
     }
 }
 
+- (void)mergeChanges:(NSNotification *)notification
+{
+    NSLog(@"Background Core Data changes saved on main thread.");
+    NSManagedObjectContext *mainContext = self.managedObjectContext;
+    
+    // Merge changes into the main context on the main thread
+    [mainContext performSelectorOnMainThread:@selector(mergeChangesFromContextDidSaveNotification:)
+                                  withObject:notification
+                               waitUntilDone:YES];
+}
+
 #pragma mark - Core Data stack
 
 // Returns the managed object context for the application.
@@ -101,7 +120,7 @@
     
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     if (coordinator != nil) {
-        _managedObjectContext = [[NSManagedObjectContext alloc] init];
+        _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
         [_managedObjectContext setPersistentStoreCoordinator:coordinator];
     }
     return _managedObjectContext;
@@ -131,7 +150,14 @@
     
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    
+    NSDictionary *options = @{
+                              NSMigratePersistentStoresAutomaticallyOption : @YES,
+                              NSInferMappingModelAutomaticallyOption : @YES
+                              };
+
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:options error:&error]) {
+
         /*
          Replace this implementation with code to handle the error appropriately.
          
@@ -161,6 +187,16 @@
     
     return _persistentStoreCoordinator;
 }
+
++ (NSManagedObjectContext *)newManagedObjectContext
+{
+    ARDAppDelegate *appDelegate = (ARDAppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+    managedObjectContext.parentContext = appDelegate.managedObjectContext;
+    
+    return managedObjectContext;
+}
+
 
 #pragma mark - Application's Documents directory
 
