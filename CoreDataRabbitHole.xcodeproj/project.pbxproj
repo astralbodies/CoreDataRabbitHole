@@ -44,7 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		93288D7417BB17E10099A499 /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		93288D7417BB17E10099A499 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		93288D7617BB1F6E0099A499 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		93EC783017B9C9B4004CF4D9 /* CoreDataRabbitHole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataRabbitHole.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EC783317B9C9B4004CF4D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -108,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				93288D7617BB1F6E0099A499 /* LICENSE */,
-				93288D7417BB17E10099A499 /* README */,
+				93288D7417BB17E10099A499 /* README.md */,
 				93EC783B17B9C9B4004CF4D9 /* CoreDataRabbitHole */,
 				93EC786F17B9C9B4004CF4D9 /* CoreDataRabbitHoleTests */,
 				93EC783217B9C9B4004CF4D9 /* Frameworks */,
