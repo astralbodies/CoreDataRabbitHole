@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		93288D7717BB1F6E0099A499 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 93288D7617BB1F6E0099A499 /* LICENSE */; };
+		935133D918C6BE5400DDEE19 /* ARDContextManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 935133D818C6BE5400DDEE19 /* ARDContextManager.m */; };
 		93EC783417B9C9B4004CF4D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC783317B9C9B4004CF4D9 /* UIKit.framework */; };
 		93EC783617B9C9B4004CF4D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC783517B9C9B4004CF4D9 /* Foundation.framework */; };
 		93EC783817B9C9B4004CF4D9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EC783717B9C9B4004CF4D9 /* CoreGraphics.framework */; };
@@ -46,6 +47,8 @@
 /* Begin PBXFileReference section */
 		93288D7417BB17E10099A499 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		93288D7617BB1F6E0099A499 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		935133D718C6BE5400DDEE19 /* ARDContextManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARDContextManager.h; sourceTree = "<group>"; };
+		935133D818C6BE5400DDEE19 /* ARDContextManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARDContextManager.m; sourceTree = "<group>"; };
 		93EC783017B9C9B4004CF4D9 /* CoreDataRabbitHole.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataRabbitHole.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93EC783317B9C9B4004CF4D9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		93EC783517B9C9B4004CF4D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -142,14 +145,16 @@
 			children = (
 				93EC784417B9C9B4004CF4D9 /* ARDAppDelegate.h */,
 				93EC784517B9C9B4004CF4D9 /* ARDAppDelegate.m */,
-				93EC785017B9C9B4004CF4D9 /* ARDMasterViewController.h */,
-				93EC785117B9C9B4004CF4D9 /* ARDMasterViewController.m */,
+				935133D718C6BE5400DDEE19 /* ARDContextManager.h */,
+				935133D818C6BE5400DDEE19 /* ARDContextManager.m */,
 				93EC785317B9C9B4004CF4D9 /* ARDDetailViewController.h */,
 				93EC785417B9C9B4004CF4D9 /* ARDDetailViewController.m */,
-				93EC785617B9C9B4004CF4D9 /* ARDMasterViewController_iPhone.xib */,
-				93EC785917B9C9B4004CF4D9 /* ARDMasterViewController_iPad.xib */,
-				93EC785C17B9C9B4004CF4D9 /* ARDDetailViewController_iPhone.xib */,
 				93EC785F17B9C9B4004CF4D9 /* ARDDetailViewController_iPad.xib */,
+				93EC785C17B9C9B4004CF4D9 /* ARDDetailViewController_iPhone.xib */,
+				93EC785017B9C9B4004CF4D9 /* ARDMasterViewController.h */,
+				93EC785117B9C9B4004CF4D9 /* ARDMasterViewController.m */,
+				93EC785917B9C9B4004CF4D9 /* ARDMasterViewController_iPad.xib */,
+				93EC785617B9C9B4004CF4D9 /* ARDMasterViewController_iPhone.xib */,
 				93EC784D17B9C9B4004CF4D9 /* CoreDataRabbitHole.xcdatamodeld */,
 				93EC783C17B9C9B4004CF4D9 /* Supporting Files */,
 			);
@@ -309,6 +314,7 @@
 				93EC784F17B9C9B4004CF4D9 /* CoreDataRabbitHole.xcdatamodeld in Sources */,
 				93EC785217B9C9B4004CF4D9 /* ARDMasterViewController.m in Sources */,
 				93EC785517B9C9B4004CF4D9 /* ARDDetailViewController.m in Sources */,
+				935133D918C6BE5400DDEE19 /* ARDContextManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
